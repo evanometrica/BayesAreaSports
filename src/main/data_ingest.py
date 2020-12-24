@@ -15,7 +15,7 @@ class ingester (object):
         """
         Gets the current records for each NBA team and outputs to DataFrame
         """
-        standings_url = "http://www.basketball-reference.com/leagues/NBA_2021.html#site_menu_link"
+        standings_url = "http://www.basketball-reference.com/leagues/NBA_2020.html#site_menu_link"
 
         response = urllib.request.urlopen(standings_url)
         html = response.read()
