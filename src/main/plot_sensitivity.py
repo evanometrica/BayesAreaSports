@@ -15,7 +15,7 @@ from bokeh.models.widgets import Panel, Tabs, TextInput, PreText
 from bokeh.models import Range1d, LinearColorMapper,  BasicTicker, ColorBar
 from bokeh.palettes import RdYlGn11 as palette
 
-my_predicter = predicter("../../data/nba.db")
+my_predicter = predicter("nba.db")
 
 
 """

@@ -13,7 +13,7 @@ import pandas as pd
 from predicter import predicter
 from bokeh.models.widgets import Panel, Tabs, TextInput, PreText
 from bokeh.models import Range1d
-my_predicter = predicter("../../data/nba.db")
+my_predicter = predicter("nba.db")
 
 
 
