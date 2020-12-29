@@ -28,7 +28,7 @@ class predicter (object):
         return alpha, beta
     
     @staticmethod
-    def cdf_record (alpha, beta, cur_wins, cur_losses, n_games = 82 ):
+    def cdf_record (alpha, beta, cur_wins, cur_losses, n_games = 72 ):
         """
         For a prior win distribution and current record, create a probability of
         remaining wins as a DataFrame
@@ -44,13 +44,13 @@ class predicter (object):
         return pd.DataFrame.from_dict(out)
 
     @staticmethod
-    def custom_projection (p, N, cur_wins, cur_losses, n_games = 82):
+    def custom_projection (p, N, cur_wins, cur_losses, n_games = 72):
         """
         Create a custom projection, based on some prior probability
         some prior strength, and a current record
         """
         alpha, beta = create_params(p,N)
-        return cdf_record (alpha, beta, cur_wins, cur_losses, n_games = 82 )
+        return cdf_record (alpha, beta, cur_wins, cur_losses, n_games = 72 )
 
     def lookup_current (self, team):
         """
@@ -100,7 +100,7 @@ class predicter (object):
         return predicter.cdf_record (alpha_prime, beta_prime, wins, losses)
 
     def calc_sensitivity (self, current_team, win_thresh = 50, min_pct = .05, max_pct = .95, by_pct = 0.05,
-            min_we = 1, max_we = 40, by_we = 1, n_games = 82):
+            min_we = 1, max_we = 40, by_we = 1, n_games = 72):
         wins, losses = self.lookup_current (current_team) 
         remaining_games = n_games - (wins + losses)
         remaining_wins = win_thresh - wins

@@ -68,7 +68,7 @@ class tab_1_maker (object):
             ]
         )
 
-        self.p2 = figure(title="Cumulitive Wins", tools=[self.p2_hover,"save"],
+        self.p2 = figure(title="Cumulative Wins", tools=[self.p2_hover,"save"],
                    background_fill_color="#E8DDCB",  width= self.size, plot_height=self.size)
         self.p2.xaxis.axis_label = 'Number of Wins in 82 game seasons'
         self.p2.yaxis.axis_label = 'Probabily of Wins'
